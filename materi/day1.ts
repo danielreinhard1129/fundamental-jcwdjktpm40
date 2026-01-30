@@ -160,4 +160,3 @@ const min: number = 10;
 const max: number = 27;
 console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
-console.log("hello");
