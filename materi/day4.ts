@@ -251,3 +251,91 @@ const numbers: number[] = [4, 9, 3, 7, 2, 5, 10];
 numbers.sort((a, b) => a - b); // asc
 // numbers.sort((a, b) => b - a); // desc
 console.log(numbers);
+
+// INCLUDES -> mengecek value pada array ada atau tidak. Hasil return nya adalah boolean
+const fruits3: string[] = ["Banana", "Orange", "Apple"];
+console.log(fruits3.includes("Banana"));
+console.log(fruits3.includes("Mango"));
+
+// MAP -> melakukan loopong pada array dan akan mereturn array baru
+const points: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const result2 = points.map((point, index) => {
+  console.log(index);
+  return point * 2;
+});
+
+console.log(result2);
+
+const students2 = [
+  { id: 1, name: "budi" },
+  { id: 2, name: "joko" },
+  { id: 3, name: "siti" },
+  { id: 4, name: "jack" },
+];
+
+const result3 = students2.map((student) => {
+  return student.id;
+});
+
+console.log(result3);
+
+// FILTER -> melakukan looping pada array dan menghasilkan array baru berdasarkan kondisi
+//           pada return functionnya
+
+const points2: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const result5 = points2.filter((point) => {
+  return point % 2 === 0;
+});
+
+console.log(result5);
+
+const ages: number[] = [12, 34, 56, 20, 17, 19, 10];
+
+const result6 = ages.filter((age) => {
+  return age >= 17;
+});
+
+console.log(result6);
+
+// FOREACH -> melakukan looping pada array dan tidak mereturn array baru
+const fruits4: string[] = ["Banana", "Orange", "Apple"];
+
+fruits4.forEach((fruit) => {
+  console.log(fruit);
+});
+
+// FIND -> mencari value yang ditemukan pertama kali dalam array
+const ages2: number[] = [12, 34, 56, 20, 17, 34, 19, 10];
+
+const result7 = ages2.find((age) => {
+  return age === 34;
+});
+
+console.log(result7);
+
+// FINDINDEX -> mirip kaya find tapi yg dihasilkan adalah indexnya. Kalo tidak ditemukan
+//              akan menghasilkan -1
+
+const students3 = [
+  { id: 12, name: "budi" },
+  { id: 23, name: "joko" },
+  { id: 37, name: "siti" },
+  { id: 42, name: "jack" },
+];
+
+const result8 = students3.findIndex((student) => {
+  return student.id === 37;
+});
+
+console.log(result8);
+
+// REDUCE ->
+const numbers2: number[] = [100, 200, 300, 400, 500];
+
+const result9 = numbers2.reduce((a, b) => {
+  return a + b;
+});
+
+console.log(result9);
